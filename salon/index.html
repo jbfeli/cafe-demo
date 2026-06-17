@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lumière — Hair &amp; Beauty Salon</title>
+<meta name="description" content="A boutique hair and beauty salon. Cut, colour, styling and skincare in a calm, welcoming space. Book your appointment online." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --blush:#f7efe9; --cream:#fbf7f3; --rose:#c9a892; --mauve:#7a5c52;
+    --ink:#3c322e; --gold:#b08d57; --muted:#8a7b73; --line:#e8ddd4;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Jost',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.8;font-weight:300}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.12}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+  .btn{display:inline-block;background:var(--mauve);color:#fff;font-family:'Jost';font-weight:400;letter-spacing:3px;
+    text-transform:uppercase;font-size:13px;padding:15px 34px;border-radius:2px;transition:.25s;border:1px solid var(--mauve)}
+  .btn:hover{background:transparent;color:var(--mauve)}
+  .btn.light{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+  .btn.light:hover{background:#fff;color:var(--mauve)}
+
+  header{position:absolute;top:0;left:0;right:0;z-index:40}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:30px 0}
+  .brand{font-family:'Cormorant Garamond';font-size:30px;letter-spacing:6px;color:#fff;text-transform:uppercase}
+  .brand small{display:block;font-family:'Jost';font-size:10px;letter-spacing:5px;font-weight:300;color:rgba(255,255,255,.8);text-align:center;margin-top:2px}
+  nav.links{display:flex;gap:38px}
+  nav.links a{color:#fff;font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:300;opacity:.9}
+  nav.links a:hover{opacity:1;border-bottom:1px solid var(--gold);padding-bottom:3px}
+  .burger{display:none;background:none;border:0;color:#fff;font-size:26px}
+
+  /* hero */
+  .hero{min-height:92vh;display:flex;align-items:center;
+    background:linear-gradient(rgba(60,50,46,.35),rgba(60,50,46,.45)),url('https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1600&auto=format&fit=crop') center/cover;color:#fff;text-align:center}
+  .hero .inner{max-width:720px;margin:0 auto}
+  .hero .pre{font-family:'Jost';letter-spacing:6px;text-transform:uppercase;font-size:13px;color:var(--rose);margin-bottom:20px}
+  .hero h1{font-size:78px;font-weight:400;margin-bottom:18px;font-style:italic}
+  .hero p{font-size:19px;font-weight:300;max-width:520px;margin:0 auto 34px;opacity:.95}
+
+  section{padding:100px 0}
+  .center{text-align:center;max-width:640px;margin:0 auto 60px}
+  .eyebrow{font-family:'Jost';letter-spacing:5px;text-transform:uppercase;font-size:12px;color:var(--gold);margin-bottom:14px}
+  .sec-h{font-size:50px;color:var(--mauve);margin-bottom:16px}
+  .center p{color:var(--muted)}
+
+  /* services */
+  .services{background:var(--blush)}
+  .menu{display:grid;grid-template-columns:1fr 1fr;gap:14px 60px;max-width:840px;margin:0 auto}
+  .row{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px dotted var(--line);padding:18px 0}
+  .row .name{font-family:'Cormorant Garamond';font-size:24px;color:var(--ink)}
+  .row .name small{display:block;font-family:'Jost';font-size:12px;letter-spacing:1px;color:var(--muted);text-transform:uppercase;font-weight:300}
+  .row .price{font-family:'Cormorant Garamond';font-size:24px;color:var(--gold);white-space:nowrap;padding-left:18px}
+
+  /* gallery */
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .gallery img{width:100%;height:260px;object-fit:cover;filter:saturate(.92)}
+  .gallery .tall{grid-row:span 2;height:auto}
+
+  /* quote */
+  .quote{background:var(--mauve);color:#fff;text-align:center}
+  .quote p{font-family:'Cormorant Garamond';font-style:italic;font-size:34px;max-width:760px;margin:0 auto;line-height:1.4}
+  .quote .by{font-family:'Jost';letter-spacing:4px;text-transform:uppercase;font-size:12px;margin-top:24px;color:var(--rose)}
+
+  /* visit */
+  .visit{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch}
+  .visit .img{background:url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1200&auto=format&fit=crop') center/cover;min-height:440px}
+  .visit .info{background:var(--blush);padding:70px 60px}
+  .visit .info h2{font-size:44px;color:var(--mauve);margin-bottom:20px}
+  .visit .info .line{display:flex;gap:14px;margin-bottom:14px;color:var(--ink)}
+  .visit .info .line b{font-family:'Jost';font-weight:500;letter-spacing:1px;min-width:90px;text-transform:uppercase;font-size:12px;color:var(--gold);padding-top:4px}
+
+  footer{background:var(--ink);color:#cbbcb2;text-align:center;padding:60px 0 34px}
+  footer .brand{color:#fff;margin-bottom:18px}
+  footer .soc{margin:20px 0;letter-spacing:3px;font-size:13px;text-transform:uppercase}
+  footer .soc a{margin:0 12px}
+
+  @media(max-width:860px){
+    nav.links{display:none}.burger{display:block}
+    .hero h1{font-size:50px}.sec-h{font-size:38px}
+    .menu{grid-template-columns:1fr;gap:0}
+    .gallery{grid-template-columns:1fr 1fr}.gallery .tall{grid-row:auto}
+    .visit{grid-template-columns:1fr}.visit .info{padding:48px 28px}
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">Lumière<small>HAIR &amp; BEAUTY</small></div>
+      <nav class="links">
+        <a href="#services">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#visit">Visit</a>
+        <a href="#book">Book</a>
+      </nav>
+      <button class="burger" aria-label="menu">☰</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="inner">
+      <p class="pre">A Boutique Hair &amp; Beauty Studio</p>
+      <h1>Where your glow begins</h1>
+      <p>Expert cut, colour and care in a calm, unhurried space designed entirely around you.</p>
+      <a class="btn light" href="#book">Book an appointment</a>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="center">
+      <p class="eyebrow">The Menu</p>
+      <h2 class="sec-h">Services &amp; treatments</h2>
+      <p>Thoughtfully crafted services using premium, kind-to-hair products. Consultations always included.</p>
+    </div>
+    <div class="menu">
+      <div class="row"><div class="name">Cut &amp; Finish<small>Wash, cut, blow-dry</small></div><div class="price">$65</div></div>
+      <div class="row"><div class="name">Full Colour<small>Single process</small></div><div class="price">$110</div></div>
+      <div class="row"><div class="name">Balayage<small>Hand-painted lightening</small></div><div class="price">$165</div></div>
+      <div class="row"><div class="name">Highlights<small>Half / full head</small></div><div class="price">$140</div></div>
+      <div class="row"><div class="name">Blow-Dry &amp; Style<small>Special occasion</small></div><div class="price">$45</div></div>
+      <div class="row"><div class="name">Gloss &amp; Treatment<small>Shine &amp; repair</small></div><div class="price">$55</div></div>
+      <div class="row"><div class="name">Bridal Hair<small>Trial + day-of</small></div><div class="price">$220</div></div>
+      <div class="row"><div class="name">Facial &amp; Skincare<small>60 minutes</small></div><div class="price">$90</div></div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="center">
+      <p class="eyebrow">Our Work</p>
+      <h2 class="sec-h">A little inspiration</h2>
+    </div>
+    <div class="wrap">
+      <div class="gallery">
+        <img class="tall" src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=800&auto=format&fit=crop" alt="" />
+        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=800&auto=format&fit=crop" alt="" />
+        <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?q=80&w=800&auto=format&fit=crop" alt="" />
+        <img class="tall" src="https://images.unsplash.com/photo-1560869713-7d0a29430803?q=80&w=800&auto=format&fit=crop" alt="" />
+        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=800&auto=format&fit=crop" alt="" />
+        <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=800&auto=format&fit=crop" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <div class="wrap">
+      <p>"I left feeling completely myself again — only a little more polished. The most relaxing hour of my month."</p>
+      <p class="by">— Eleanor, client since 2019</p>
+    </div>
+  </section>
+
+  <section id="visit" style="padding:0">
+    <div class="visit">
+      <div class="img"></div>
+      <div class="info">
+        <p class="eyebrow">Come See Us</p>
+        <h2>Visit the studio</h2>
+        <div class="line"><b>Address</b><span>14 Rosewood Lane, Old Town</span></div>
+        <div class="line"><b>Hours</b><span>Tue–Fri 9–7 · Sat 9–5 · Sun &amp; Mon closed</span></div>
+        <div class="line"><b>Phone</b><span>(555) 020-0200</span></div>
+        <div class="line"><b>Email</b><span>hello@lumiere.example</span></div>
+        <div style="margin-top:28px"><a class="btn" href="#book">Reserve your seat</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="book" style="text-align:center;background:var(--blush)">
+    <div class="center" style="margin-bottom:30px">
+      <p class="eyebrow">Appointments</p>
+      <h2 class="sec-h">Book your moment</h2>
+      <p>Reserve online in seconds, or call us — we'd love to hear from you.</p>
+    </div>
+    <a class="btn" href="tel:5550200">Call (555) 020-0200</a>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="brand">Lumière</div>
+      <p>14 Rosewood Lane, Old Town · (555) 020-0200</p>
+      <div class="soc"><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">Pinterest</a></div>
+      <p style="font-size:12px;opacity:.6;margin-top:10px">© 2026 Lumière Hair &amp; Beauty — Demo site.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.burger').addEventListener('click',function(){
+      var l=document.querySelector('nav.links');
+      var open=l.style.display==='flex';
+      l.style.display=open?'none':'flex';
+      l.style.flexDirection='column';l.style.position='absolute';l.style.top='80px';l.style.left='0';l.style.right='0';
+      l.style.background='rgba(60,50,46,.97)';l.style.padding='24px 28px';l.style.gap='18px';l.style.textAlign='center';
+    });
+  </script>
+</body>
+</html>

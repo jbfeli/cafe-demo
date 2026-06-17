@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex" />
+<title>Demo Showroom</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',system-ui,sans-serif;background:#0c0f14;color:#e8edf2;line-height:1.6;padding:60px 24px}
+  .wrap{max-width:1080px;margin:0 auto}
+  header{text-align:center;margin-bottom:50px}
+  header h1{font-size:42px;font-weight:800;letter-spacing:-1px}
+  header p{color:#8b97a6;margin-top:10px;font-size:17px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{display:block;background:#141921;border:1px solid #1f2731;border-radius:14px;padding:26px;text-decoration:none;color:inherit;transition:.18s}
+  .card:hover{border-color:#3a7afe;transform:translateY(-4px);box-shadow:0 16px 36px rgba(0,0,0,.4)}
+  .swatch{height:10px;border-radius:6px;margin-bottom:16px}
+  .card h2{font-size:21px;font-weight:700;margin-bottom:4px}
+  .card .type{font-size:13px;color:#6f7d8c;text-transform:uppercase;letter-spacing:1px}
+  .card p{color:#9aa7b5;font-size:14px;margin-top:10px}
+  .card .go{margin-top:14px;font-size:13px;font-weight:600;color:#5b8dff}
+  footer{text-align:center;color:#5a6675;font-size:13px;margin-top:50px}
+  @media(max-width:780px){.grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Website Demo Showroom</h1>
+      <p>Seven design directions — pick a style, send the link.</p>
+    </header>
+    <div class="grid">
+      <a class="card" href="./plumber/"><div class="swatch" style="background:linear-gradient(90deg,#0c2233,#ff6a1a)"></div><div class="type">Trades</div><h2>Rapid Response Plumbing</h2><p>Bold, urgent, trust-driven. Navy &amp; orange.</p><div class="go">View demo →</div></a>
+      <a class="card" href="./salon/"><div class="swatch" style="background:linear-gradient(90deg,#7a5c52,#c9a892)"></div><div class="type">Beauty</div><h2>Lumière Salon</h2><p>Elegant boutique. Blush, mauve &amp; gold.</p><div class="go">View demo →</div></a>
+      <a class="card" href="./cafe/"><div class="swatch" style="background:linear-gradient(90deg,#b5563a,#ecdcc6)"></div><div class="type">Food &amp; Drink</div><h2>The Copper Bean</h2><p>Warm &amp; artisanal. Terracotta &amp; cream.</p><div class="go">View demo →</div></a>
+      <a class="card" href="./gym/"><div class="swatch" style="background:linear-gradient(90deg,#0a0a0a,#c8ff00)"></div><div class="type">Fitness</div><h2>FORGE Strength</h2><p>Dark, high-energy. Black &amp; lime.</p><div class="go">View demo →</div></a>
+      <a class="card" href="./dentist/"><div class="swatch" style="background:linear-gradient(90deg,#2e8bc0,#e8f6fb)"></div><div class="type">Healthcare</div><h2>Brightwater Dental</h2><p>Clean &amp; calming. Sky blue &amp; white.</p><div class="go">View demo →</div></a>
+      <a class="card" href="./landscaping/"><div class="swatch" style="background:linear-gradient(90deg,#3f5e3a,#c2703d)"></div><div class="type">Outdoor</div><h2>Rootworks Landscaping</h2><p>Earthy &amp; natural. Moss &amp; clay.</p><div class="go">View demo →</div></a>
+      <a class="card" href="./photographer/"><div class="swatch" style="background:linear-gradient(90deg,#0f0f0f,#8c8c8c)"></div><div class="type">Creative</div><h2>Nora Vance Photography</h2><p>Minimal &amp; editorial. Monochrome gallery.</p><div class="go">View demo →</div></a>
+    </div>
+    <footer>Private showroom · demo content only</footer>
+  </div>
+</body>
+</html>

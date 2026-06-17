@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rootworks Landscaping &amp; Garden Design</title>
+<meta name="description" content="Garden design, lawn care and hardscaping that brings your outdoor space to life. Free on-site consultations." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Karla:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{--moss:#3f5e3a;--moss-d:#2f4a2b;--leaf:#6f9a4e;--sand:#f3efe6;--clay:#c2703d;--ink:#26302180;--text:#2a3326;--muted:#637059;--line:#dfdacb}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Karla',sans-serif;color:var(--text);background:var(--sand);line-height:1.7}
+  h1,h2,h3{font-family:'Bitter',serif;line-height:1.18}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 26px}
+  .btn{display:inline-block;background:var(--clay);color:#fff;font-family:'Karla';font-weight:600;letter-spacing:.5px;
+    font-size:15px;padding:14px 30px;border-radius:6px;transition:.2s}
+  .btn:hover{background:#a85c2e}
+  .btn.green{background:var(--moss)}.btn.green:hover{background:var(--moss-d)}
+  .btn.out{background:transparent;border:2px solid #fff;color:#fff}.btn.out:hover{background:#fff;color:var(--moss)}
+  header{position:sticky;top:0;background:var(--sand);z-index:40;border-bottom:1px solid var(--line)}
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+  .brand{font-family:'Bitter';font-weight:700;font-size:24px;color:var(--moss);display:flex;align-items:center;gap:8px}
+  nav.links{display:flex;gap:28px;align-items:center}
+  nav.links a{font-weight:600;font-size:15px;color:var(--muted)}
+  nav.links a:hover{color:var(--moss)}
+  .burger{display:none;background:none;border:0;font-size:24px;color:var(--moss)}
+  .hero{background:linear-gradient(rgba(38,48,33,.55),rgba(38,48,33,.62)),url('https://images.unsplash.com/photo-1558904541-efa843a96f01?q=80&w=1600&auto=format&fit=crop') center/cover;color:#fff}
+  .hero .wrap{padding:110px 26px 120px;max-width:760px}
+  .tag{font-family:'Karla';font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:13px;color:#cfe0b8;margin-bottom:16px}
+  .hero h1{font-size:60px;font-weight:700;margin-bottom:18px}
+  .hero p{font-size:19px;max-width:520px;margin-bottom:28px;opacity:.95}
+  .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+  section{padding:84px 0}
+  .center{text-align:center;max-width:600px;margin:0 auto 48px}
+  .eyebrow{font-family:'Karla';font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:13px;color:var(--clay);margin-bottom:8px}
+  .sec-h{font-size:42px;font-weight:700;color:var(--moss)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:#fff;border-radius:10px;overflow:hidden;border:1px solid var(--line);transition:.2s}
+  .card:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(38,48,33,.12)}
+  .card img{width:100%;height:170px;object-fit:cover}
+  .card .b{padding:24px}
+  .card h3{font-size:22px;color:var(--moss);margin-bottom:6px}
+  .card p{color:var(--muted);font-size:15px}
+  .steps{background:var(--moss);color:#fff}
+  .steps .grid{grid-template-columns:repeat(4,1fr)}
+  .step .n{font-family:'Bitter';font-size:40px;color:var(--leaf)}
+  .step h3{font-size:21px;margin:4px 0 6px}
+  .step p{color:#cfe0b8;font-size:14px}
+  .band{background:url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=1600&auto=format&fit=crop') center/cover;position:relative;text-align:center;color:#fff}
+  .band:before{content:'';position:absolute;inset:0;background:rgba(38,48,33,.7)}
+  .band .wrap{position:relative;padding:90px 26px}
+  .band h2{font-size:46px;font-weight:700;margin-bottom:10px}
+  .band p{font-size:18px;margin-bottom:24px;opacity:.95}
+  footer{background:var(--moss-d);color:#c3d3b3;padding:46px 0 30px;font-size:14px}
+  .fgrid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;border-bottom:1px solid #3c5636;padding-bottom:22px;margin-bottom:18px}
+  footer b{color:#fff;font-family:'Bitter'}
+  @media(max-width:860px){nav.links{display:none}.burger{display:block}.hero h1{font-size:42px}.grid,.steps .grid{grid-template-columns:1fr 1fr}.sec-h{font-size:32px}}
+</style>
+</head>
+<body>
+  <header><div class="wrap nav">
+    <div class="brand">🌿 Rootworks</div>
+    <nav class="links"><a href="#services">Services</a><a href="#process">Process</a><a href="#work">Our Work</a><a class="btn green" href="#quote">Free Quote</a></nav>
+    <button class="burger">☰</button>
+  </div></header>
+
+  <section class="hero"><div class="wrap">
+    <p class="tag">Garden Design · Lawn Care · Hardscaping</p>
+    <h1>Your garden, beautifully brought to life.</h1>
+    <p>From tired lawns to dream gardens — thoughtful design and tidy, reliable work that lasts through every season.</p>
+    <div class="cta"><a class="btn" href="#quote">Get a Free On-Site Quote</a><a class="btn out" href="#work">See Our Work</a></div>
+  </div></section>
+
+  <section id="services"><div class="wrap">
+    <div class="center"><p class="eyebrow">What We Do</p><h2 class="sec-h">Outdoor spaces, done right</h2></div>
+    <div class="grid">
+      <div class="card"><img src="https://images.unsplash.com/photo-1599685315640-4a9ba2613f46?q=80&w=800&auto=format&fit=crop" alt="" /><div class="b"><h3>Garden Design</h3><p>Bespoke planting plans and full garden makeovers tailored to your space and style.</p></div></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1592722470693-31345ca6e22d?q=80&w=800&auto=format&fit=crop" alt="" /><div class="b"><h3>Lawn &amp; Maintenance</h3><p>Mowing, feeding, hedging and seasonal upkeep on a schedule that suits you.</p></div></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=800&auto=format&fit=crop" alt="" /><div class="b"><h3>Patios &amp; Hardscaping</h3><p>Paving, decking, walls and paths built to last and made to match your home.</p></div></div>
+    </div>
+  </div></section>
+
+  <section id="process" class="steps"><div class="wrap">
+    <div class="center"><p class="eyebrow" style="color:var(--leaf)">How It Works</p><h2 class="sec-h" style="color:#fff">Simple from start to finish</h2></div>
+    <div class="grid">
+      <div class="step"><div class="n">1</div><h3>Free Visit</h3><p>We walk your garden, listen to your ideas and measure up — no charge.</p></div>
+      <div class="step"><div class="n">2</div><h3>Clear Quote</h3><p>A detailed, fixed-price plan with timeline. No hidden costs.</p></div>
+      <div class="step"><div class="n">3</div><h3>We Build</h3><p>Our team gets to work, tidy and on schedule, keeping you updated throughout.</p></div>
+      <div class="step"><div class="n">4</div><h3>Enjoy</h3><p>We hand over a finished space — and can keep it pristine with upkeep plans.</p></div>
+    </div>
+  </div></section>
+
+  <section id="work" class="band"><div class="wrap">
+    <h2>500+ gardens transformed</h2>
+    <p>Trusted by homeowners across the region for over a decade.</p>
+    <a class="btn" href="#quote">Start Your Project</a>
+  </div></section>
+
+  <section id="quote" style="text-align:center"><div class="wrap">
+    <div class="center"><p class="eyebrow">Get Started</p><h2 class="sec-h">Let's plan your garden</h2><p style="color:var(--muted)">Book a free, no-obligation site visit — we'll bring the ideas.</p></div>
+    <a class="btn green" href="tel:5550600">Call (555) 060-0600</a>
+  </div></section>
+
+  <footer><div class="wrap">
+    <div class="fgrid">
+      <div><b>🌿 Rootworks Landscaping</b><p style="margin-top:8px;max-width:280px">Garden design, lawn care and hardscaping for homes across the region.</p></div>
+      <div><b>Service Area</b><p style="margin-top:8px">The greater valley<br>&amp; surrounding towns</p></div>
+      <div><b>Contact</b><p style="margin-top:8px">(555) 060-0600<br>hello@rootworks.example</p></div>
+    </div>
+    <p>© 2026 Rootworks Landscaping — Demo site.</p>
+  </div></footer>
+  <script>document.querySelector('.burger').addEventListener('click',function(){var l=document.querySelector('nav.links');var o=l.style.display==='flex';l.style.cssText=o?'':'display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#f3efe6;padding:20px 26px;gap:14px;border-bottom:1px solid #dfdacb';});</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FORGE Strength &amp; Conditioning</title>
+<meta name="description" content="No mirrors, no egos. Coached strength and conditioning for real people. First class free." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{--black:#0a0a0a;--coal:#141414;--lime:#c8ff00;--ash:#9a9a9a;--line:#262626}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;color:#fff;background:var(--black);line-height:1.6}
+  h1,h2,h3,.disp{font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.5px;line-height:.95;font-weight:400}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 26px}
+  .btn{display:inline-block;background:var(--lime);color:#0a0a0a;font-weight:700;text-transform:uppercase;letter-spacing:1px;
+    font-size:15px;padding:16px 34px;transition:.15s;clip-path:polygon(0 0,100% 0,94% 100%,0% 100%)}
+  .btn:hover{background:#fff}
+  .btn.out{background:transparent;color:#fff;border:2px solid #333;clip-path:none}
+  .btn.out:hover{border-color:var(--lime);color:var(--lime)}
+  header{position:sticky;top:0;background:rgba(10,10,10,.92);backdrop-filter:blur(8px);z-index:40;border-bottom:1px solid var(--line)}
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+  .brand{font-family:'Anton';font-size:30px;letter-spacing:3px}
+  .brand span{color:var(--lime)}
+  nav.links{display:flex;gap:30px;align-items:center}
+  nav.links a{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--ash)}
+  nav.links a:hover{color:#fff}
+  .burger{display:none;background:none;border:0;color:#fff;font-size:26px}
+  .hero{background:linear-gradient(rgba(10,10,10,.6),rgba(10,10,10,.85)),url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600&auto=format&fit=crop') center/cover}
+  .hero .wrap{padding:120px 26px 130px}
+  .hero h1{font-size:104px;max-width:900px}
+  .hero h1 span{color:var(--lime)}
+  .hero p{font-size:19px;color:#cfcfcf;max-width:520px;margin:22px 0 32px}
+  .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stats div{padding:34px 20px;text-align:center;border-right:1px solid var(--line)}
+  .stats div:last-child{border-right:0}
+  .stats b{font-family:'Anton';font-size:46px;color:var(--lime);display:block}
+  .stats small{color:var(--ash);text-transform:uppercase;letter-spacing:2px;font-size:12px}
+  section{padding:90px 0}
+  .eyebrow{color:var(--lime);font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:13px}
+  .sec-h{font-size:56px;margin:8px 0 14px}
+  .lead{color:var(--ash);max-width:560px;margin-bottom:44px}
+  .prog{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .prog .c{background:var(--coal);border:1px solid var(--line);padding:34px 28px;transition:.18s}
+  .prog .c:hover{border-color:var(--lime);transform:translateY(-5px)}
+  .prog .c .num{font-family:'Anton';font-size:34px;color:#2c2c2c}
+  .prog .c h3{font-size:30px;margin:6px 0 10px}
+  .prog .c p{color:var(--ash);font-size:15px}
+  .pricing{background:var(--coal)}
+  .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .plan{background:var(--black);border:1px solid var(--line);padding:38px 30px;text-align:center}
+  .plan.feat{border-color:var(--lime)}
+  .plan h3{font-size:26px}.plan .price{font-family:'Anton';font-size:60px;color:var(--lime);margin:10px 0}
+  .plan .price small{font-family:'Inter';font-size:15px;color:var(--ash)}
+  .plan ul{list-style:none;margin:18px 0 26px;color:var(--ash);font-size:15px}
+  .plan li{padding:7px 0;border-bottom:1px solid var(--line)}
+  .strip{text-align:center;background:var(--lime);color:#0a0a0a}
+  .strip h2{font-size:60px}.strip p{font-size:18px;margin:10px 0 26px;font-weight:600}
+  .btn.dark{background:#0a0a0a;color:var(--lime);clip-path:none}
+  footer{padding:46px 0;text-align:center;color:var(--ash);border-top:1px solid var(--line);font-size:13px;letter-spacing:1px;text-transform:uppercase}
+  @media(max-width:860px){nav.links{display:none}.burger{display:block}.hero h1{font-size:60px}.stats{grid-template-columns:1fr 1fr}.prog,.pgrid{grid-template-columns:1fr}.sec-h{font-size:40px}.strip h2{font-size:40px}}
+</style>
+</head>
+<body>
+  <header><div class="wrap nav">
+    <div class="brand">FOR<span>GE</span></div>
+    <nav class="links"><a href="#programs">Programs</a><a href="#pricing">Pricing</a><a href="#join">Join</a><a class="btn out" href="#join">First Class Free</a></nav>
+    <button class="burger">☰</button>
+  </div></header>
+
+  <section class="hero"><div class="wrap">
+    <h1>Stop scrolling. <span>Start lifting.</span></h1>
+    <p>Coached strength &amp; conditioning for people who want results, not a fashion show. No mirrors. No egos. Just work.</p>
+    <div class="cta"><a class="btn" href="#join">Claim Your Free Class</a><a class="btn out" href="#programs">View Programs</a></div>
+  </div></section>
+
+  <div class="stats">
+    <div><b>600+</b><small>Members</small></div>
+    <div><b>40</b><small>Classes / Week</small></div>
+    <div><b>12</b><small>Coaches</small></div>
+    <div><b>0</b><small>Egos</small></div>
+  </div>
+
+  <section id="programs"><div class="wrap">
+    <p class="eyebrow">Train With Us</p>
+    <h2 class="sec-h">Programs that deliver</h2>
+    <p class="lead">Every session is coached, scaled to you, and built on a proven progression. Beginners welcome.</p>
+    <div class="prog">
+      <div class="c"><div class="num">01</div><h3>Strength</h3><p>Barbell-focused blocks to build real, lasting power. Squat, press, pull, repeat.</p></div>
+      <div class="c"><div class="num">02</div><h3>Conditioning</h3><p>High-intensity circuits that torch calories and build engine. Sweat guaranteed.</p></div>
+      <div class="c"><div class="num">03</div><h3>Hybrid</h3><p>The best of both — strength and metcon in one brutal, balanced hour.</p></div>
+    </div>
+  </div></section>
+
+  <section id="pricing" class="pricing"><div class="wrap">
+    <p class="eyebrow">Membership</p>
+    <h2 class="sec-h">Simple pricing</h2>
+    <div class="pgrid" style="margin-top:36px">
+      <div class="plan"><h3>Drop-In</h3><div class="price">$20<small>/class</small></div><ul><li>Any single class</li><li>No commitment</li><li>Gear provided</li></ul><a class="btn out" href="#join">Choose</a></div>
+      <div class="plan feat"><h3>Unlimited</h3><div class="price">$149<small>/mo</small></div><ul><li>All classes</li><li>Free InBody scan</li><li>Nutrition guide</li></ul><a class="btn" href="#join">Most Popular</a></div>
+      <div class="plan"><h3>8-Pack</h3><div class="price">$120<small>/mo</small></div><ul><li>8 classes / month</li><li>Roll-over credits</li><li>Member events</li></ul><a class="btn out" href="#join">Choose</a></div>
+    </div>
+  </div></section>
+
+  <section id="join" class="strip"><div class="wrap">
+    <h2>Your first class is on us.</h2>
+    <p>Book a free intro session — we'll show you the ropes, no pressure.</p>
+    <a class="btn dark" href="tel:5550400">Book Now · (555) 040-0400</a>
+  </div></section>
+  <footer>FORGE STRENGTH &amp; CONDITIONING · 8 IRON YARD, WEST END · DEMO SITE</footer>
+  <script>document.querySelector('.burger').addEventListener('click',function(){var l=document.querySelector('nav.links');var o=l.style.display==='flex';l.style.cssText=o?'':'display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#0a0a0a;padding:22px 26px;gap:16px;border-bottom:1px solid #262626';});</script>
+</body>
+</html>
