@@ -104,5 +104,24 @@
   </section>
   <footer>THE COPPER BEAN · 27 MAPLE STREET · @THECOPPERBEAN · DEMO SITE</footer>
   <script>document.querySelector('.burger').addEventListener('click',function(){var l=document.querySelector('nav.links');var o=l.style.display==='flex';l.style.cssText=o?'':'display:flex;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:#f6ede1;padding:20px 26px;gap:14px;border-bottom:1px solid #e0d0bb';});</script>
+<!-- demo-protect -->
+<div id="__wm">DEMO &middot; built by Justin &middot; text 702-555-0000 to make this site live</div>
+<style>
+#__wm{position:fixed;right:14px;bottom:14px;z-index:99999;background:rgba(15,15,15,.82);
+color:#fff;font:600 12px/1.2 system-ui,-apple-system,sans-serif;padding:9px 13px;border-radius:8px;
+letter-spacing:.2px;box-shadow:0 6px 18px rgba(0,0,0,.32);pointer-events:none;user-select:none;max-width:60vw}
+@media print{#__wm{display:none}}
+</style>
+<script>
+(function(){
+  // Friction only -- deters casual copying, not a real lock.
+  document.addEventListener('contextmenu',function(e){e.preventDefault();});
+  document.addEventListener('dragstart',function(e){if(e.target&&e.target.tagName==='IMG')e.preventDefault();});
+  document.addEventListener('keydown',function(e){
+    var k=(e.key||'').toLowerCase(), m=e.ctrlKey||e.metaKey;
+    if(e.key==='F12'||(m&&(k==='u'||k==='s'))||(m&&e.shiftKey&&(k==='i'||k==='j'||k==='c'))){e.preventDefault();}
+  });
+})();
+</script>
 </body>
 </html>
